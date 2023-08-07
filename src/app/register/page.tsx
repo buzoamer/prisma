@@ -1,6 +1,6 @@
 "use client"
 import Head from 'next/head';
-import userService from '@/services/users';
+import {signUp, login} from '@/services/users';
 import { useForm, } from 'react-hook-form';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Import corrected next/router
@@ -28,11 +28,15 @@ export default function Register() {
       const hashedPassword = await hash(data.password, saltRounds);
       data.password = hashedPassword;
 
-      const user = await userService.register(data);
+      const user = await signUp(data);
 
-      router.push('/login'); // Redirect to login page after successful registration
+      if(user.status === 200){
+        router.push('/login'); // Redirect to login page after successful registration
+      }
+
     } catch (error) {
       setMessage('An error occurred during registration.'); // Set a generic error message
+      console.log(error)
     }
   };
 

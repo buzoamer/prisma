@@ -1,30 +1,23 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from "@/lib/prisma";
 
-export async function userService(){
-  register
-  login
-const prisma = new PrismaClient();
-
-async function register(data: any) {
+export async function signUp(data: { email: string; password: string }) {
   const user = await prisma.user.create({
     data: {
       username: data.email,
       password: data.password,
     },
   });
-  return user;
+  return {status: 200, message: 'User successfully signed up!'};
 }
 
-async function login(data: any) {
+export async function login(email: string, password: string) {
   const user = await prisma.user.findUnique({
-    where: { username: data.username },
+    where: { username: credentials.email }, // Find user by email
   });
 
-  if (!user || user.password !== data.password) {
+  if (!user || user.password !== credentials.password) {
     throw new Error('Invalid credentials');
   }
 
-  return user;
+  return { status: 200, message: 'Login successful' };
 }
-}
-export default userService;

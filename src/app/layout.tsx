@@ -15,10 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen h-full w-full flex flex-col bg-no-repeat bg-[url('/car.jpg')] bg-cover">
-      <div className="flex-grow">
-        <main>{children}</main>
-      </div>
-    </div>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+
   );
 }

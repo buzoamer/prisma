@@ -3,18 +3,22 @@
 import React from 'react';
 import Head from 'next/head';
 import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import userService from '@/services/users';
 import Link from 'next/link';
+import { prisma } from '@/lib/prisma';
 
 interface LoginFormData {
   email: string;
   password: string;
 }
+interface ApiResponse {
+  status: number;
+  message: string;
+  // You can add other fields if necessary
+}
+
 
 const Login = () => {
-  const router = useRouter();
   const [message, setMessage] = useState<string | null>('');
   const {
     register,
@@ -22,13 +26,15 @@ const Login = () => {
     formState: { errors }
   } = useForm<LoginFormData>();
   const onSubmit = async (data: LoginFormData) => {
-    const user = await userService.login(data);
 
-    if (user.status === 401) {
-        setMessage(user.message);
-        return;
-    }
-    router.push('/');
+   const userRes = await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    console.log(userRes)
   };
 
   return (
@@ -70,7 +76,6 @@ const Login = () => {
 
                 <div className="flex items-center">
                   <button
-                    type="submit"
                     className="bg-pink-600 text-white text-center px-2 py-2 rounded hover:bg-pink-900">Submit</button>
                   <span className="text-white text-md px-4 text-center">
                     Not registered?
