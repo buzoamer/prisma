@@ -5,9 +5,10 @@ import Head from 'next/head';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import Link from 'next/link';
-import { prisma } from '@/lib/prisma';
+import { login } from '@/services/users';
+import { useRouter } from 'next/navigation';
 
-interface LoginFormData {
+export interface LoginFormData {
   email: string;
   password: string;
 }
@@ -19,6 +20,7 @@ interface ApiResponse {
 
 
 const Login = () => {
+  const router = useRouter();
   const [message, setMessage] = useState<string | null>('');
   const {
     register,
@@ -26,15 +28,23 @@ const Login = () => {
     formState: { errors }
   } = useForm<LoginFormData>();
   const onSubmit = async (data: LoginFormData) => {
+    const res= await login(data);
 
-   const userRes = await fetch("/api/login", {
+    if(res.status!=200){
+      console.log(res)
+      return setMessage(res.message)
+
+    } 
+    router.push("/register")
+
+  /* const userRes = await fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type":"application/json"
       },
       body: JSON.stringify(data)
     })
-    console.log(userRes)
+    console.log(userRes) */
   };
 
   return (

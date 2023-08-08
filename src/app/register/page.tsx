@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'; // Import corrected next/router
 import Link from 'next/link';
 import {hash} from 'bcrypt-ts'
 
-interface RegisterFormData {
+export interface RegisterFormData {
   name: string;
   email: string;
   password: string;
@@ -28,7 +28,7 @@ export default function Register() {
       const hashedPassword = await hash(data.password, saltRounds);
       data.password = hashedPassword;
 
-      const user = await signUp(data);
+    const user = await signUp(data);
 
       if(user.status === 200){
         router.push('/login'); // Redirect to login page after successful registration
