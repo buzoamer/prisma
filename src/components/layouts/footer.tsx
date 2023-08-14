@@ -3,6 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
+    <>
     <footer className="bg-gradient-to-t from-pink-700 to-transparent rounded-t-md text-white py-3 bottom-0 w-full">
       <div className="text-center">
         <p className='text-sm font-l'>
@@ -13,6 +14,7 @@ const Footer: React.FC = () => {
         </p>
       </div>
     </footer>
+    </>
   );
 }
 

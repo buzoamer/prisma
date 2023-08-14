@@ -5,14 +5,14 @@ const prisma = new PrismaClient();
 async function main() {
   const user = await prisma.user.create({
       data: {
-      name: "Admin",
-      email: "test@email.com",
-      password: "admin"
+      name: "Test",
+      email: "amer@email.com",
+      password: "test"
 }})
   await prisma.event.create({
     data: {
-      title: "Prisma",
-      short_description: "Prisma event test",
+      title: "Prisma 2",
+      short_description: "Prisma event test 2",
       content: "This is an event seeded by Prisma",
       created_by : user.id
     }

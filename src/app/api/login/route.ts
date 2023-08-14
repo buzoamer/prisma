@@ -8,7 +8,7 @@ export async function POST(request: Request) {
         console.log(data)
 
         const user = await prisma.user.findFirst({
-            where: { id: 1 }, // Find user by email
+            where: { id: data.id }, // Find user by email
         });
 
 
