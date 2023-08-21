@@ -4,9 +4,7 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
     try {
         const data = await request.json();
-
-        console.log(data)
-
+        
         const user = await prisma.user.findFirst({
             where: { id: data.id }, // Find user by email
         });

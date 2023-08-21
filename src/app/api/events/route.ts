@@ -5,9 +5,6 @@ import { NextResponse } from "next/server";
 export async function GET(request: Request) {
     try {
         const data = await request.json();
-
-        console.log(data)
-
         const events = await prisma.event.findMany({
             where: { id: data.id }, // Find event by id
         });

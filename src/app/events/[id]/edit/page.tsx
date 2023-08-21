@@ -1,9 +1,7 @@
-"use client"
+
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { useForm } from 'react-hook-form';
-import { fetchOneEvent, update } from '@/services/events';
+import { fetchOneEvent} from '@/services/events';
+import Form from '@/components/ui/form';
 
 export interface DataEvent {
     id: number;
@@ -14,25 +12,8 @@ export interface DataEvent {
     createdAt: string,
   }
 
-export default function Edit(event: DataEvent) {
-  const router = useRouter();
-
-  const onSubmit = async (data: DataEvent) => {
-    const updatedEvent = await update({ ...data, id: event.id, title: event.title });
-    if (updatedEvent.status === 200) {
-      router.push('/events');
-      console.log('Event updated successfully');
-    } else {
-      console.log('Error updating event:', updatedEvent.message);
-      console.log(data)
-    }
-  };
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<DataEvent>();
-
+export default async function Edit({params:{id}}:{params:{id: string}}) {
+    const data = await fetchOneEvent(Number(id))
   return (
     <>
       <Head>
@@ -46,46 +27,7 @@ export default function Edit(event: DataEvent) {
           <div className="max-w-md mx-auto pb-12">
             <div className="bg-white p-8 rounded-lg shadow-lg shadow-gray-800">
               <h2 className="text-center text-black text-2xl font-bold mb-6">Event editing</h2>
-
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="mb-4">
-                  <label className="block font-medium">New title</label>
-                  <input
-                    type="text"
-                    id="title"
-                    className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    placeholder="Enter the new title"
-                    {...register('title')}
-                  />
-                  <p className="text-red-500"></p>
-                </div>
-
-                <div className="mb-4">
-                  <label htmlFor="shortDescription" className="block font-medium">Short description</label>
-                  <textarea
-                    id="shortDescription"
-                    className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    rows={3}
-                    placeholder="Describe the event"
-                    {...register('short_description')}
-                  ></textarea>
-                  <p className="text-red-500"></p>
-                </div>
-
-                <div className="mb-4">
-                  <label htmlFor="content" className="block font-medium">Content</label>
-                  <textarea
-                    id="content"
-                    className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    rows={12}
-                    placeholder="Enter post content"
-                    {...register('content')}>
-                    </textarea>
-                  <p className="text-red-500"></p>
-                </div>
-
-                <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Commit changes</button>
-              </form>
+              <Form data={data}/>
             </div>
           </div>
         </div>

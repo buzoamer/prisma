@@ -31,11 +31,11 @@ export async function fetchAllEvents() {
   }
 }
 
-export async function fetchOneEvent(data: DataEvent) {
+export async function fetchOneEvent(id: number) {
   try {
     const event = await prisma.event.findUnique({
       where:{
-        title: data.title
+        id: id
       }
     })
     
