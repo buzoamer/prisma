@@ -14,15 +14,18 @@ export interface DataEvent {
     createdAt: string,
   }
 
-export default function Edit() {
+export default function Edit(event: DataEvent) {
   const router = useRouter();
 
   const onSubmit = async (data: DataEvent) => {
-    const updatedEvent = await update({ ...data, id: data.id });
-    if (updatedEvent.status === 500) {
-        router.push('/events');
+    const updatedEvent = await update({ ...data, id: event.id, title: event.title });
+    if (updatedEvent.status === 200) {
+      router.push('/events');
+      console.log('Event updated successfully');
+    } else {
+      console.log('Error updating event:', updatedEvent.message);
+      console.log(data)
     }
-    
   };
   const {
     register,
