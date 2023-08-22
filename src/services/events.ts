@@ -38,7 +38,6 @@ export async function fetchOneEvent(id: number) {
         id: id
       }
     })
-    
     if (!event) {
       return { status: 404, message: 'No events found' };
     }
@@ -54,17 +53,17 @@ export async function update(data: DataEvent) {
   try {
     const existingEvent = await prisma.event.findUnique({
       where: {
-        title: data.title,
+        id: data.id,
       },
     });
-
+    console.log(existingEvent)
     if (!existingEvent) {
       return { status: 404, message: 'No events found' };
     }
 
     const updatedEvent = await prisma.event.update({
       where: {
-        title: data.title,
+        id: data.id,
       },
       data: {
         title: data.title,
@@ -72,13 +71,12 @@ export async function update(data: DataEvent) {
         content: data.content,
       },
     });
-
+    console.log(data)
     return { status: 200, message: 'Event updated', event: updatedEvent };
   } catch (error) {
     console.error('Error updating event:', error);
     return { status: 500, message: 'Error updating event' };
   } finally {
-    await prisma.$disconnect();
   }
 }
 

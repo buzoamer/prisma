@@ -21,7 +21,8 @@ export default function Form({data}: any) {
     });
     const router = useRouter();
     const onSubmit = async (data: DataEvent) => {
-        const updatedEvent = await update({ ...data, id: event.id, title: event.title });
+        console.log(data)
+        const updatedEvent = await update(data);
         if (updatedEvent.status === 200) {
             router.push('/events');
             console.log('Event updated successfully');
