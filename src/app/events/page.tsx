@@ -10,6 +10,8 @@ export interface DataEvent {
   title: string;
   short_description: string;
   content: string;
+  category: string;
+  location: string;
   created_by: string;
   createdAt: string,
 }
@@ -62,8 +64,8 @@ const Dashboard = async () => {
                 <tr key={event.id} className="bg-zinc-300 text-gray-800">
                   <td className="py-2 px-4 border">{event.id}</td>
                   <td className="py-2 px-4 border">{event.title}</td>
-                  <td className="py-2 px-4 border">Lokacija</td>
-                  <td className="py-2 px-4 border">Category</td>
+                  <td className="py-2 px-4 border">{event.location}</td>
+                  <td className="py-2 px-4 border">{event.category}</td>
                   <td className="py-2 px-4 border">Time</td>
                   <td className="py-2 px-4 border">
                     <div className="flex">

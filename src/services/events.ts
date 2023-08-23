@@ -10,7 +10,9 @@ export async function create(data: EventData) {
       title: data.title,
       short_description: data.short_description,
       content: data.content,
-      created_by: 1
+      created_by: 1,
+      category: data.category,
+      location: data.location
     },
   });
   return {status: 200, message: 'Event successfully created!'};

@@ -10,6 +10,8 @@ export interface EventData {
   title: string;
   short_description: string;
   content: string;
+  category: string;
+  location: string;
   created_by: 1;
 }
 
@@ -50,8 +52,8 @@ const Create = () => {
                     type="text"
                     placeholder="Enter post title"
                     className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('title')}
-                  />
+                    {...register('title')}/>
+                    
                   <p className="text-red-500"></p>
                 </div>
 
@@ -61,8 +63,8 @@ const Create = () => {
                     placeholder="Describe the event"
                     rows={3}
                     className="w-full px-4 py-2 border text-black border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('short_description')}
-                  />
+                    {...register('short_description')}/>
+
                   <p className="text-red-500"></p>
                 </div>
 
@@ -72,8 +74,30 @@ const Create = () => {
                     placeholder="Enter post content"
                     rows={12}
                     className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('content')}
-                  />
+                    {...register('content')}/>
+
+                  <p className="text-red-500"></p>
+                </div>
+
+                <div className="mb-4">
+                  <label className="block font-medium">Category</label>
+                  <input
+                    type="text"
+                    placeholder="Enter post category"
+                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    {...register('category')}/>
+
+                  <p className="text-red-500"></p>
+                </div>
+
+                <div className="mb-4">
+                  <label className="block font-medium">Location</label>
+                  <input
+                    type="text"
+                    placeholder="Enter post location"
+                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    {...register('location')}/>
+
                   <p className="text-red-500"></p>
                 </div>
 

@@ -33,14 +33,14 @@ export default function Form({data}: any) {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-4">
-                <label className="block font-medium">New title</label>
+                <label className="block font-medium">Title</label>
                 <input
                     type="text"
                     id="title"
                     className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                     placeholder="Enter the new title"
-                    {...register('title')}
-                />
+                    {...register('title')}/>
+                    
                 <p className="text-red-500"></p>
             </div>
 
@@ -51,8 +51,8 @@ export default function Form({data}: any) {
                     className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                     rows={3}
                     placeholder="Describe the event"
-                    {...register('short_description')}
-                ></textarea>
+                    {...register('short_description')}>
+                </textarea>
                 <p className="text-red-500"></p>
             </div>
 
@@ -68,6 +68,27 @@ export default function Form({data}: any) {
                 <p className="text-red-500"></p>
             </div>
 
+            <div className="mb-4">
+                  <label className="block font-medium">Category</label>
+                  <input
+                    type="text"
+                    placeholder="Enter post category"
+                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    {...register('category')}/>
+
+                  <p className="text-red-500"></p>
+                </div>
+
+                <div className="mb-4">
+                  <label className="block font-medium">Location</label>
+                  <input
+                    type="text"
+                    placeholder="Enter post location"
+                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    {...register('location')}/>
+
+                  <p className="text-red-500"></p>
+                </div>
             <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Commit changes</button>
         </form>
 
