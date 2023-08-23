@@ -3,7 +3,6 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <>
     <nav className="bg-gradient-to-t from-gray-800 to-pink-700 rounded-b-md shadow-md shadow-gray-800 text-white fixed top-0 w-full">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
         <div className="relative flex h-16 gap-4 items-center">
@@ -23,7 +22,6 @@ const Header: React.FC = () => {
         </div>
       </div>
     </nav>
-    </>
   );
 }
 

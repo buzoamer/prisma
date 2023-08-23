@@ -18,10 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Header/>
-      <body  className="min-h-screen h-full w-full flex flex-col bg-no-repeat bg-[url('/car.jpg')] bg-cover">{children}</body>
-      <Footer/>
+      <head>
+      </head>
+      <body className="min-h-screen h-full w-full flex flex-col bg-no-repeat bg-[url('/car.jpg')] bg-cover">
+        <Header/>
+        <main className="flex-grow">{children}</main>
+        <Footer/>
+      </body>
     </html>
-
   );
 }
