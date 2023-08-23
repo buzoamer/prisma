@@ -57,7 +57,7 @@ export default function Form({data}: any) {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="content" className="block font-medium">Content</label>
+                <label className="block font-medium">Content</label>
                 <textarea
                     id="content"
                     className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
