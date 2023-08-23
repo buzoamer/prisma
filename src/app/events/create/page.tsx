@@ -45,7 +45,7 @@ const Create = () => {
 
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
-                  <label htmlFor="title" className="block font-medium">Title</label>
+                  <label className="block font-medium">Title</label>
                   <input
                     type="text"
                     placeholder="Enter post title"
@@ -67,7 +67,7 @@ const Create = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="content" className="block font-medium">Content</label>
+                  <label className="block font-medium">Content</label>
                   <textarea
                     placeholder="Enter post content"
                     rows={12}

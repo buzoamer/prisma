@@ -45,7 +45,7 @@ export default function Form({data}: any) {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="shortDescription" className="block font-medium">Short description</label>
+                <label className="block font-medium">Short description</label>
                 <textarea
                     id="shortDescription"
                     className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
