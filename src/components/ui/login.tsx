@@ -24,9 +24,7 @@ export default function LoginForm() {
       console.log("Invalid credentials")
     } else {
         router.push('/events')
-        
     }
-    
 
   };
   return (
