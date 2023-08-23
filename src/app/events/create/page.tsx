@@ -47,57 +47,57 @@ const Create = () => {
 
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
-                  <label className="block font-medium">Title</label>
-                  <input
-                    type="text"
-                    placeholder="Enter post title"
-                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('title')}/>
-                    
+                  <label className="block font-medium text-black">Title
+                    <input
+                      type="text"
+                      placeholder="Enter post title"
+                      className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                      {...register('title')}/>
+                  </label>
                   <p className="text-red-500"></p>
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="short_description" className="block font-medium">Short description</label>
-                  <textarea
-                    placeholder="Describe the event"
-                    rows={3}
-                    className="w-full px-4 py-2 border text-black border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('short_description')}/>
-
+                  <label className="block font-medium text-black">Short description
+                    <textarea
+                      placeholder="Describe the event"
+                      rows={3}
+                      className="w-full px-4 py-2 border text-black border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                      {...register('short_description')}/>
+                  </label>
                   <p className="text-red-500"></p>
                 </div>
 
                 <div className="mb-4">
-                  <label className="block font-medium">Content</label>
-                  <textarea
-                    placeholder="Enter post content"
-                    rows={12}
-                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('content')}/>
-
+                  <label className="block font-medium text-black">Content
+                    <textarea
+                      placeholder="Enter post content"
+                      rows={12}
+                      className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                      {...register('content')}/>
+                  </label>
                   <p className="text-red-500"></p>
                 </div>
 
                 <div className="mb-4">
-                  <label className="block font-medium">Category</label>
-                  <input
-                    type="text"
-                    placeholder="Enter post category"
-                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('category')}/>
-
+                  <label className="block font-medium text-black">Category
+                    <input
+                      type="text"
+                      placeholder="Enter post category"
+                      className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                      {...register('category')}/>
+                  </label>
                   <p className="text-red-500"></p>
                 </div>
 
                 <div className="mb-4">
-                  <label className="block font-medium">Location</label>
-                  <input
-                    type="text"
-                    placeholder="Enter post location"
-                    className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                    {...register('location')}/>
-
+                  <label className="block font-medium text-black">Location
+                    <input
+                      type="text"
+                      placeholder="Enter post location"
+                      className="w-full px-4 py-2 text-black border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                      {...register('location')}/>
+                  </label>
                   <p className="text-red-500"></p>
                 </div>
 

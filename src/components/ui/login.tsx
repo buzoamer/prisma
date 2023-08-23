@@ -32,25 +32,28 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
-                  <label htmlFor="email" className="block mb-2 text-white">Email</label>
-                  <input
-                    {...register('email')}
-                    type="text"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-2 bg-pink-500 text-white bg-opacity-70 border border-gray-300 rounded focus:outline-none focus:bg-pink-900 focus:border-white placeholder:text-slate-300"
-                    placeholder="Enter your email"/>
+                  <label className="block mb-2 text-white">Email
+                    <input
+                      {...register('email')}
+                      autoComplete='off'
+                      type="text"
+                      id="email"
+                      name="email"
+                      className="w-full px-4 py-2 bg-pink-500 text-white bg-opacity-70 border border-gray-300 rounded focus:outline-none focus:bg-pink-900 focus:border-white placeholder:text-slate-300"
+                      placeholder="Enter your email"/>
+                  </label>
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="password" className="block text-white">Password</label>
-                  <input
-                    {...register('password')}
-                    type="password"
-                    id="password"
-                    name="password"
-                    className="w-full px-4 py-2 text-white bg-pink-500 bg-opacity-70 border border-gray-300 rounded focus:outline-none focus:bg-pink-900 focus:border-white placeholder:text-slate-300"
-                    placeholder="Enter your password"/>
+                  <label className="block text-white">Password
+                    <input
+                      {...register('password')}
+                      type="password"
+                      id="password"
+                      name="password"
+                      className="w-full px-4 py-2 text-white bg-pink-500 bg-opacity-70 border border-gray-300 rounded focus:outline-none focus:bg-pink-900 focus:border-white placeholder:text-slate-300"
+                      placeholder="Enter your password"/>
+                  </label>
                 </div>
 
                 <div className="flex items-center">

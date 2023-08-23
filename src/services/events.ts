@@ -71,6 +71,8 @@ export async function update(data: DataEvent) {
         title: data.title,
         short_description: data.short_description,
         content: data.content,
+        location: data.location,
+        category: data.category
       },
     });
     console.log(data)

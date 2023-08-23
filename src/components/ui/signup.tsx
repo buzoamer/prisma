@@ -34,32 +34,37 @@ export default function SignUpForm() {
   return (
     <form method="post" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-6">
-                <label className="block mb-2 text-gray-800" htmlFor="name">Name</label>
-                <input
-                  className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
-                  {...register('name')}
-                  placeholder="Enter your name"
-                  type="text"/>
-                <p className="text-red-500"></p>
-              </div>
-
-              <div className="mb-6">
-                <label className="block mb-2 text-gray-800" htmlFor="email">Email</label>
-                <input
-                  className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
-                  {...register('email')}
-                  placeholder="Enter your email"
-                  type="email"/>
-                <p className="text-red-500"></p>
-              </div>
-
-              <div className="mb-6">
-                <label className="block mb-2 text-gray-800" htmlFor="password">Password</label>
-                <input
+                <label className="block mb-2 text-gray-800">Name
+                  <input
                     className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
-                    {...register('password')}
-                    placeholder="Enter your password"
-                    type="password"/>
+                    {...register('name')}
+                    autoComplete='off'
+                    placeholder="Enter your name"
+                    type="text"/>
+                </label>
+                <p className="text-red-500"></p>
+              </div>
+
+              <div className="mb-6">
+                <label className="block mb-2 text-gray-800">Email
+                  <input
+                    className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
+                    {...register('email')}
+                    autoComplete='off'
+                    placeholder="Enter your email"
+                    type="email"/>
+                </label>
+                <p className="text-red-500"></p>
+              </div>
+
+              <div className="mb-6">
+                <label className="block mb-2 text-gray-800">Password
+                  <input
+                      className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
+                      {...register('password')}
+                      placeholder="Enter your password"
+                      type="password"/>
+                </label>
                 <p className="text-red-500"></p>
               </div>
 

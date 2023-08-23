@@ -8,6 +8,8 @@ export interface DataEvent {
     title: string;
     short_description: string;
     content: string;
+    category: string;
+    location: string;
     created_by: string;
     createdAt: string,
   }
