@@ -3,22 +3,21 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <nav className="bg-gradient-to-t from-gray-800 to-pink-700 rounded-b-md shadow-md shadow-gray-800 text-white fixed top-0 w-full">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
-        <div className="relative flex h-16 gap-4 items-center">
-          <Link href="#" className="text-white rounded-xl py-2 px-4 hover:bg-pink-600 hover:text-white hover:border-b-2">
-            Event Manager
+    <nav className="bg-white border-gray-200 bg-slate-800 fixed top-0 w-full rounded-sm">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-16">
+        <Link href="#" className="block py-2 pl-4 pr-6 text-white bg-blue-700 rounded md:bg-transparent md:p-0">
+          Event Manager
+        </Link>
+        <div className="flex items-center ml-auto space-x-6">
+          <Link href="/events" className="block py-2 pl-4 pr-6 text-white rounded hover:text-blue-600 md:p-0">
+            Events
           </Link>
-          <ul className="flex space-x-4">
-            <li>
-              <Link href="/events" className="text-white rounded-xl py-2 px-4 hover:bg-pink-600 hover:text-white hover:border-b-2">
-                Events
-              </Link>
-            </li>
-          </ul>
-          <button
-            className="text-white rounded-xl py-2 px-4 hover:bg-pink-600 hover:text-white hover:border-b-2"
-            aria-label="Toggle navigation">Menu</button>
+          <button className="block py-2 pl-4 pr-6 text-white rounded hover:text-blue-600 md:p-0">
+              Menu
+          </button>
+            <Link href="" className="block py-2 pl-4 pr-6 text-white rounded hover:text-blue-600 md:p-0">
+              Contact
+            </Link>
         </div>
       </div>
     </nav>
