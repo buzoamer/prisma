@@ -15,9 +15,9 @@ const Header: React.FC = () => {
           <button className="block py-2 pl-4 pr-6 text-white rounded hover:text-blue-600 md:p-0">
               Menu
           </button>
-            <Link href="" className="block py-2 pl-4 pr-6 text-white rounded hover:text-blue-600 md:p-0">
+            <button className="block py-2 pl-4 pr-6 text-white rounded hover:text-blue-600 md:p-0">
               Contact
-            </Link>
+            </button>
         </div>
       </div>
     </nav>
