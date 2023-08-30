@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       </head>
-      <body className="min-h-screen h-full w-full flex flex-col bg-no-repeat bg-[url('/car.jpg')] bg-cover">
+      <body className="min-h-screen h-full w-full flex flex-col bg-no-repeat bg-[url('/event-bg.jpg')] bg-cover">
         <Header/>
         <main className="flex-grow">{children}</main>
         <Footer/>
