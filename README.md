@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Event Manager is a neat short project that I have worked on during my first job. It is a mock web app designed to present local events and as a platform to promote them.
+Event Manager is a neat short project that I have worked on during my first job. It is a mock web app written in TypeScript, designed to show local events and as a platform to promote them.
 At the moment, the project itself is very dull, having only the "skeleton" of its features, that being the Signing up and Signing in, view of the current events, adding an event (/events/create; no button added) and editing existing events.
 
 Since the project is done and run locally, it is using MySQL database, utilizing Prisma ORM for query building, Tailwindcss for styling and Bcrypt for hashing passwords.
