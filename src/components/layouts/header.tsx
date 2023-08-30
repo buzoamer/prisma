@@ -3,8 +3,8 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <nav className="bg-white border-gray-200 bg-slate-800 fixed top-0 w-full rounded-sm">
-      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-16">
+    <nav className="border-gray-200 bg-gradient-to-b from-slate-800 to-transparent fixed top-0 w-full rounded-sm">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-20">
         <Link href="#" className="block py-2 pl-4 pr-6 text-white bg-blue-700 rounded md:bg-transparent md:p-0">
           Event Manager
         </Link>
