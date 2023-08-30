@@ -34,9 +34,9 @@ export default function SignUpForm() {
   return (
     <form method="post" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-6">
-                <label className="block mb-2 text-gray-800">Name
+                <label className="block mb-2 text-black">Name
                   <input
-                    className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-slate-800"
                     {...register('name')}
                     autoComplete='off'
                     placeholder="Enter your name"
@@ -46,9 +46,9 @@ export default function SignUpForm() {
               </div>
 
               <div className="mb-6">
-                <label className="block mb-2 text-gray-800">Email
+                <label className="block mb-2 text-black">Email
                   <input
-                    className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-slate-800"
                     {...register('email')}
                     autoComplete='off'
                     placeholder="Enter your email"
@@ -58,9 +58,9 @@ export default function SignUpForm() {
               </div>
 
               <div className="mb-6">
-                <label className="block mb-2 text-gray-800">Password
+                <label className="block mb-2 text-black">Password
                   <input
-                      className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-slate-800"
                       {...register('password')}
                       placeholder="Enter your password"
                       type="password"/>
@@ -71,10 +71,10 @@ export default function SignUpForm() {
               <div className="flex items-center justify mb-6">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white text-center px-2 py-2 rounded hover:bg-blue-600">Submit</button>
-                <span className="text-dark text-sm text-center px-1">
+                  className="bg-slate-800 text-white text-center px-2 py-2 rounded hover:bg-blue-800">Submit</button>
+                <span className="text-black text-md text-center px-12">
                   Already registered?{' '}
-                  <Link className="text-blue-500 hover:text-blue-800 underline" href="/login">Log in here!</Link>
+                  <Link className="ml-2 text-blue-600 hover:text-blue-800 underline" href="/login">Log in here!</Link>
                 </span>
               </div>
             </form>

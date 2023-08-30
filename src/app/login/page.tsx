@@ -24,10 +24,10 @@ const Login = () => {
       </Head>
 
       <div className="mt-20">
-        <div className="container mx-auto">
-          <div className="max-w-lg py-1 mx-auto">
-            <div className="bg-purple-600 bg-opacity-50 p-16 m-2 rounded-lg shadow-lg shadow-pink-800">
-                <h2 className="text-center text-white text-2xl font-bold mb-4">Log in form</h2>
+        <div className="flex justify-center items-center pt-16">
+          <div className="w-full max-w-md py-12">
+            <div className="bg-white p-5 rounded-lg shadow-lg shadow-gray-800">
+                <h2 className="text-2xl font-bold mb-6 text-center text-black">Log in form</h2>
               <LoginForm/>
             </div>
           </div>

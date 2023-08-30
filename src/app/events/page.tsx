@@ -69,7 +69,7 @@ const Dashboard = async () => {
                   <td className="py-2 px-4 border">Time</td>
                   <td className="py-2 px-4 border">
                     <div className="flex">
-                      <Link className="bg-blue-400 hover:bg-blue-600 rounded text-white px-4 py-1 mr-2" href={`/events/${event.id}/edit`}>Edit</Link>
+                      <Link className="bg-blue-500 hover:bg-blue-700 rounded text-white px-4 py-1 mr-2" href={`/events/${event.id}/edit`}>Edit</Link>
                       <Link className="bg-red-500 hover:bg-red-600 rounded text-white px-4 py-1 mr-2" href="#">Delete</Link>
                       <Link className="bg-slate-500 hover:bg-gray-800 rounded text-white px-4 py-1" href={`/events/${event.id}/view`}>Overview</Link>
                     </div>

@@ -30,36 +30,36 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
-                  <label className="block mb-2 text-white">Email
+                  <label className="block mb-2 text-black">Email
                     <input
                       {...register('email')}
                       autoComplete='off'
                       type="text"
                       id="email"
                       name="email"
-                      className="w-full px-4 py-2 bg-pink-500 text-white bg-opacity-70 border border-gray-300 rounded focus:outline-none focus:bg-pink-900 focus:border-white placeholder:text-slate-300"
+                      className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-slate-800"
                       placeholder="Enter your email"/>
                   </label>
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-white">Password
+                  <label className="block text-black">Password
                     <input
                       {...register('password')}
                       type="password"
                       id="password"
                       name="password"
-                      className="w-full px-4 py-2 text-white bg-pink-500 bg-opacity-70 border border-gray-300 rounded focus:outline-none focus:bg-pink-900 focus:border-white placeholder:text-slate-300"
+                      className="w-full px-4 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-slate-800"
                       placeholder="Enter your password"/>
                   </label>
                 </div>
 
                 <div className="flex items-center">
                   <button
-                    className="bg-pink-600 text-white text-center px-2 py-2 rounded hover:bg-pink-900">Submit</button>
-                  <span className="text-white text-md px-4 text-center">
+                    className="bg-slate-800 text-white text-center px-2 py-2 rounded hover:bg-blue-800">Submit</button>
+                  <span className="text-black text-md text-center px-12">
                     Not registered?
-                    <Link className="text-white underline hover:text-black px-2 font-semibold" href="/register">Do it here!</Link>
+                    <Link className="ml-2 text-blue-600 hover:text-blue-800 underline text-semibold" href="/register">Do it here!</Link>
                   </span>
                 </div>
               </form>

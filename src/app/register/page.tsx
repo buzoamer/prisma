@@ -22,7 +22,7 @@ export default function Register() {
       <div className="flex justify-center items-center pt-16">
         <div className="w-full max-w-md py-12">
           <div className="bg-white p-5 rounded-lg shadow-lg shadow-gray-800">
-            <h2 className="text-2xl font-bold mb-6 text-center text-black">Sign in form</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center text-black">Sign up form</h2>
             <SignUpForm/>
           </div>
         </div>
