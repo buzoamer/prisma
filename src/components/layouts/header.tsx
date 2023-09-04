@@ -33,13 +33,13 @@ const Header: React.FC = () => {
             Contact
           </button>
           {isDropdownOpen && (
-            <div className="absolute right-4 mt-44 bg-slate-500 rounded-md">
+            <div className="absolute right-5 mt-44 bg-slate-500 rounded-md">
               <ul className="p-2">
                 <li>
                   <Link
                     href={socialMedia.instagram}
                     target="_blank"
-                    className="block py-2 px-2 text-white hover:bg-slate-200 hover:rounded-md hover:text-blue-800">
+                    className="block py-2 px-2 flex items-center text-white hover:bg-slate-200 hover:rounded-md hover:text-blue-800">
                     <FaInstagram className="inline-block mr-2"/> Instagram
                   </Link>
                 </li>
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
                   <Link
                     href={socialMedia.facebook}
                     target="_blank"
-                    className="block py-2 px-2 text-white hover:bg-slate-200 hover:rounded-md hover:text-blue-800">
+                    className="block py-2 px-2 flex items-center text-white hover:bg-slate-200 hover:rounded-md hover:text-blue-800">
                     <FaFacebook className="inline-block mr-2"/> Facebook
                   </Link>
                 </li>
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                   <Link
                     href={socialMedia.linkedin}
                     target="_blank"
-                    className="block py-2 px-2 text-white hover:bg-slate-200 hover:rounded-md hover:text-blue-800">
+                    className="block py-2 px-2 flex items-center text-white hover:bg-slate-200 hover:rounded-md hover:text-blue-800">
                     <FaLinkedin className="inline-block mr-2"/> LinkedIn
                   </Link>
                 </li>
