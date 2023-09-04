@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             Contact
           </button>
           {isDropdownOpen && (
-            <div className="absolute right-4 mt-44 bg-slate-500 rounded shadow-lg">
+            <div className="absolute right-4 mt-44 bg-slate-500 rounded-md">
               <ul className="p-2">
                 <li>
                   <Link
